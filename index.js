@@ -1,4 +1,4 @@
-var socket = require('socket.io-client')('http://localhost:1335');
+var socket = require('socket.io-client')('http://omnicanalapi.tech:1335');
 
 //funcion que se ejecuta al conectarse
 socket.on('connect', () => {
@@ -7,8 +7,8 @@ socket.on('connect', () => {
 
 	socket.emit("sesion", {
 		action: "login",
-		user: "demo3",
-		pass: "admin"
+		user: "USUARIO",
+		pass: "PASSWORD"
 	})
 
 });
