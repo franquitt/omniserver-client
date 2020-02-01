@@ -1,4 +1,4 @@
-var socket = require('socket.io-client')('http://omnicanalapi.tech:1335');
+var socket = require('socket.io-client')('https://omnicanalapi.tech', {path: "/socketio/socket.io"});
 
 //funcion que se ejecuta al conectarse
 socket.on('connect', () => {
