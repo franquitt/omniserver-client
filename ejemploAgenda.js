@@ -1,4 +1,4 @@
-var socket = require('socket.io-client')('http://localhost:1335');
+let socket = require('socket.io-client')("https://omnicanalapi.tech", {path: "/socketio/socket.io"});
 
 //funcion que se ejecuta al conectarse
 socket.on('connect', () => {
@@ -7,7 +7,7 @@ socket.on('connect', () => {
 
 	socket.emit("sesion", {
 		action: "login",
-		user: "USUARIO",
+		user: "USER",
 		pass: "PASSWORD"
 	})
 
@@ -39,7 +39,7 @@ socket.on('sesion', (msg) => {
 						primario: false,
 						valorConfigAgendaObject: [
 							{id: 852, valor: "opcionb"},
-							{id: 0, valor: "nuevoo test juan!"},
+
 
 						]
 					}
